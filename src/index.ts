@@ -15,7 +15,7 @@ const prompt = promptSync()
  * @returns {number} count count of the vowels in sentence
  */
 function vowelCount(sentence: string): number {
-  const vowelList = 'aeiouAEIOU'
+  const vowelList = 'aeiouyAEIOUY'
   let count = 0
   const length = sentence.length
 
@@ -26,9 +26,8 @@ function vowelCount(sentence: string): number {
   }
   return count
 }
-
+const sentence = prompt('Enter a Sentence: ')
 try {
-  const sentence = prompt('Enter a Sentence: ')
   const count = vowelCount(sentence)
   console.log(`Number of vowels in the given sentence is ${count}`)
 } catch (e) {
